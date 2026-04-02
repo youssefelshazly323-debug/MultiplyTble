@@ -1,41 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="24dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/titleTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="648dp"
-        android:text="Multiplication Tables"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="s@string/title_multiplication"
+        android:textSize="26sp"
+        android:textColor="#1A1A1A"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:minHeight="48dp"
-        android:text="Enter number"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="247dp" />
+        android:minHeight="56dp"
+        android:hint=" @string/hint_enter_number"
+        android:textSize="16sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text=" @string/btn_generate"
+        android:textSize="16sp"
+        android:textColor="#0B0202"
+        android:backgroundTint="#FF0034"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="12dp"
+        tools:ignore="VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/resultTxt"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Multiply"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="516dp"
-        tools:ignore="MissingConstraints" />
+        android:textSize="16sp"
+        android:textColor="#1A1A1A"
+        android:lineSpacingExtra="6dp"
+        android:gravity="center"
+        android:padding="20dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:layout_marginTop="28dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
