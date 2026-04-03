@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class DIisply : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
@@ -32,10 +30,10 @@ class DIisply : AppCompatActivity() {
         //set the string onto the display
 
         //declare the control variable
-        var counter = 2
+        var counter = 1
         while (counter <= 10) {
             if (counter == 6) {
-                continue
+                break
             }
 
             val answer = tableNumber * counter
@@ -43,16 +41,6 @@ class DIisply : AppCompatActivity() {
 
             counter++
         }
-
-
-
-
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        multiplytable.text = tableDisplay
     }
 }

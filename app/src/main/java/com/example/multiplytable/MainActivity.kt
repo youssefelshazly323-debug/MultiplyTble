@@ -19,6 +19,11 @@ class MainActivity : AppCompatActivity() {
         val resultTxt = findViewById<TextView>(R.id.resultTxt)
         val button = findViewById<Button>(R.id.button)
         val editTextNumber = findViewById<EditText>(R.id.editTextNumber)
+        resultTxt.visibility = View.GONE
+        editTextNumber.setText("")
+
+
+
 
         button.setOnClickListener {
             val input = editTextNumber.text.toString()
